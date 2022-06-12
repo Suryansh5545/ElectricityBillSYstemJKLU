@@ -139,6 +139,9 @@ this.setVisible(true);
         jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         jLabel5.setText("New User? Sign up here");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel5MouseEntered(evt);
             }
@@ -316,6 +319,11 @@ jLabel4.setForeground(new java.awt.Color(64,123,255));         // TODO add your 
 jLabel4.setForeground(new java.awt.Color(0,0,0));          // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4MouseExited
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+new Create1().setVisible(true);
+                this.dispose();      
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -358,7 +366,6 @@ jLabel4.setForeground(new java.awt.Color(0,0,0));          // TODO add your hand
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField2;
@@ -366,10 +373,7 @@ jLabel4.setForeground(new java.awt.Color(0,0,0));          // TODO add your hand
     private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder1;
     private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder2;
     private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder3;
-    private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder4;
     private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder5;
-    private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder6;
-    private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder7;
     // End of variables declaration//GEN-END:variables
 }
 //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/electricbillgen/close_def.png"))); // NOI18N

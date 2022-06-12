@@ -19,17 +19,11 @@ import java.sql.Statement;
  */
 public class LoginPage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
     public LoginPage() {
         initComponents();
         connect();
     }
-    
-    ResultSet rs;
-    
-public void connect(){
+ public void connect(){
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/electricbill","root","lordoflords");
@@ -48,7 +42,10 @@ public void connect(){
         Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
     }
     
-}
+}   
+    ResultSet rs;
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -200,4 +197,6 @@ try {while(rs.next()){
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+  
 }
