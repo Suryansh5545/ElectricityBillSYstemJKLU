@@ -376,4 +376,3 @@ new Create1().setVisible(true);
     private com.mycompany.electricbillgen.Extras.PanelBorder panelBorder5;
     // End of variables declaration//GEN-END:variables
 }
-//jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/electricbillgen/close_def.png"))); // NOI18N
