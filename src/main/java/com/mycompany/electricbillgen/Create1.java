@@ -25,7 +25,6 @@ public class Create1 extends javax.swing.JFrame {
 Dimension size = toolkit.getScreenSize();
 setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
 
-        
 this.dispose();
 this.setUndecorated(true); // to set the jframe tranparent
 this.setBackground(new Color(0, 0, 0, 0));
@@ -36,6 +35,7 @@ jLabel10.setEnabled(false);
 
     }
  ResultSet rs;
+ String passedName;
 
      public  void connect(){
     try {
@@ -212,8 +212,11 @@ jLabel10.setEnabled(false);
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("G:\\Java\\New Folder\\ElectricBillGen\\src\\main\\java\\Icons\\next_def.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("G:\\Java\\New Folder\\ElectricBillGen\\src\\main\\java\\Icons\\button(6).png")); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel10MouseEntered(evt);
             }
@@ -234,27 +237,34 @@ jLabel10.setEnabled(false);
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelBorder2Layout.createSequentialGroup()
                         .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(99, 99, 99)
+                        .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelBorder2Layout.createSequentialGroup()
                                 .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(99, 99, 99)
-                                .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(28, 28, 28)
+                                .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(panelBorder2Layout.createSequentialGroup()
+                                        .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(panelBorder2Layout.createSequentialGroup()
+                                .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel10))
-                        .addGap(28, 28, 28)
-                        .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(288, 288, 288))
+                                    .addGroup(panelBorder2Layout.createSequentialGroup()
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 73, Short.MAX_VALUE)))))
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         panelBorder2Layout.setVerticalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,8 +279,8 @@ jLabel10.setEnabled(false);
                 .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                        .addComponent(jLabel11)))
                 .addGap(46, 46, 46)
                 .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -459,30 +469,35 @@ else{
     }//GEN-LAST:event_jTextField2KeyTyped
 
     private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
-            connect();
-        
+        connect();
+
         try {while(rs.next()){
-        String usernme = rs.getString("Username");
-        
-        
-        if(usernme.equals(jTextField2.getText())){
-        jLabel11.setForeground(Color.red);
-        jLabel11.setText("Username Taken!");
-        break;}
-        else if (jTextField2.getText().length() >5){
-        jLabel11.setForeground(Color.green);
-        jLabel11.setText("This Username seems good");
+            String usernme = rs.getString("Username");
+
+            if(usernme.equals(jTextField2.getText())){
+                jLabel11.setForeground(Color.red);
+                jLabel11.setText("Username Taken!");
+                break;}
+            else if (jTextField2.getText().length() >5){
+                jLabel11.setForeground(Color.green);
+                jLabel11.setText("This Username seems good");
+                passedName=rs.getString("Username");
+            }
         }
         }
-}
-  catch (SQLException ex) {
-        Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
-    }
+        catch (SQLException ex) {
+            Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jTextField2KeyReleased
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
-jTextField2.setText("");        // TODO add your handling code here:
+        jTextField2.setText("");        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+new Create2(passedName).setVisible(true);
+                this.dispose(); 
+    }//GEN-LAST:event_jLabel10MouseClicked
 
   
     
