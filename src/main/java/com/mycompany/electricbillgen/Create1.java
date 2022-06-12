@@ -212,7 +212,7 @@ jLabel10.setEnabled(false);
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/next_def.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("G:\\Java\\New Folder\\ElectricBillGen\\src\\main\\java\\Icons\\next_def.png")); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel10MouseEntered(evt);
@@ -356,13 +356,14 @@ jLabel10.setEnabled(false);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
-        // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/close.png")));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("G:\\Java\\New Folder\\ElectricBillGen\\src\\main\\java\\Icons\\close.png"));
  
     }//GEN-LAST:event_jLabel5MouseEntered
 
     private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
-       jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/close_def.png")));
+  
+       jLabel5.setIcon(new javax.swing.ImageIcon("G:\\Java\\New Folder\\ElectricBillGen\\src\\main\\java\\Icons\\close_def.png"));
 
     }//GEN-LAST:event_jLabel5MouseExited
 

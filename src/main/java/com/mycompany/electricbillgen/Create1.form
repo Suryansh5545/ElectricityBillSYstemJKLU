@@ -353,7 +353,7 @@
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Icons/next_def.png"/>
+                  <Image iconType="2" name="G:\Java\New Folder\ElectricBillGen\src\main\java\Icons\next_def.png"/>
                 </Property>
               </Properties>
               <Events>
